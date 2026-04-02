@@ -1,4 +1,3 @@
-# src/rag_test/generation/answerer.py
 from dataclasses import dataclass
 from langchain_groq import ChatGroq
 

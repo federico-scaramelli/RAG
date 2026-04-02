@@ -1,4 +1,3 @@
-# src/rag_test/pipeline/rag_pipeline.py
 from dataclasses import dataclass
 from typing import Any
 
