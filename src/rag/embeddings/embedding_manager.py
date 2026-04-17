@@ -8,6 +8,10 @@ from sentence_transformers import SentenceTransformer
 
 from rag.config import settings
 
+# Embedding management utility for the RAG pipeline.
+# Loads a SentenceTransformer model (optionally from a local cache),
+# generates vector embeddings for input texts, and exposes the
+# embedding dimensionality used by the vector store and retriever.
 
 class EmbeddingManager:
     def __init__(self, model_name: str | None = None) -> None:

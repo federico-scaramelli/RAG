@@ -1,6 +1,10 @@
 from langchain_core.documents import Document
 from rag.processing import split_documents
 
+# Document chunking inspection script.
+# Builds a sample document, splits it into chunks using the processing pipeline,
+# and prints the number of chunks, chunk metadata, and a content preview.
+
 docs = [
     Document(
         page_content="Questo è un test. " * 300,

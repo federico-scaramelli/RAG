@@ -1,6 +1,9 @@
 from rag.config import settings
 from rag.loaders import load_all_supported_documents, load_pdf_documents, load_text_documents
 
+# Loader validation script for the RAG ingestion layer.
+# Loads text, PDF, and all supported document types from the raw data directory,
+# then prints document counts and a sample of metadata and content for inspection.
 
 def main() -> None:
     print("Using raw data dir:", settings.raw_data_dir)

@@ -1,6 +1,11 @@
 from dataclasses import dataclass
 from langchain_groq import ChatGroq
 
+# Answer generation component for the RAG pipeline.
+# Wraps a ChatGroq LLM with a fixed system and user prompt template,
+# taking retrieved context and a user query to produce a concise,
+# context-grounded natural language answer.
+
 SYSTEM_PROMPT = """You are a helpful assistant.
 Answer using only the provided context.
 If the context is insufficient, say so clearly.

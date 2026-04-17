@@ -1,6 +1,11 @@
 from dataclasses import dataclass
 from typing import Any
 
+# High-level RAG orchestration pipeline.
+# Connects a retriever and an answer generator to handle user queries end-to-end:
+# fetches relevant documents, builds a context string, and returns the final answer,
+# confidence score, and structured source metadata.
+
 @dataclass
 class RAGPipeline:
     retriever: Any

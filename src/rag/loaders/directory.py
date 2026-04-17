@@ -7,6 +7,10 @@ from langchain_community.document_loaders import DirectoryLoader, PyMuPDFLoader,
 
 from rag.config import settings
 
+# Document loading utilities for the RAG pipeline.
+# Uses LangChain directory loaders to read text (.txt) and PDF (.pdf) files
+# from the raw data directory (or a custom path) and returns them as
+# unified document lists for downstream processing.
 
 def load_text_documents(directory: str | Path | None = None) -> list[Any]:
     target_dir = Path(directory) if directory else settings.raw_data_dir

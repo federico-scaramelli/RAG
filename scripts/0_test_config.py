@@ -1,5 +1,8 @@
 from rag.config import settings
 
+# Simple configuration inspection script.
+# Imports the project settings and prints the main resolved paths
+# used by the RAG application, including data and vector store directories.
 
 def main() -> None:
     print("project_root:", settings.project_root)

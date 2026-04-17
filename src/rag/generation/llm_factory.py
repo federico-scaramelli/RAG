@@ -3,6 +3,10 @@ from langchain_groq import ChatGroq
 
 from rag.config import settings
 
+# LLM factory utility for the RAG pipeline.
+# Loads environment-based configuration and creates a ChatGroq instance
+# with the configured model and generation parameters used for answer generation.
+
 load_dotenv()
 
 def build_llm() -> ChatGroq:

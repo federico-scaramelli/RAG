@@ -4,6 +4,10 @@ from rag.embeddings import EmbeddingManager
 from rag.pipeline import IngestPipeline
 from rag.store import VectorStore
 
+# End-to-end ingestion test for the RAG pipeline.
+# Initializes the embedding manager and vector store, runs the ingestion
+# process with collection reset enabled, and prints load, chunking,
+# collection size, and embedding dimension statistics.
 
 def main() -> None:
     embedding_manager = EmbeddingManager()

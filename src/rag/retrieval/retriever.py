@@ -5,6 +5,10 @@ from typing import Any
 from rag.embeddings import EmbeddingManager
 from rag.store import VectorStore
 
+# Semantic retriever for the RAG pipeline.
+# Encodes queries into embeddings, queries the vector store for the most
+# similar chunks, and returns ranked results with scores and metadata,
+# applying an optional similarity score threshold for filtering.
 
 class RAGRetriever:
     """Handles query-based retrieval from the vector store."""

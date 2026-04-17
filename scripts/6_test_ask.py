@@ -13,6 +13,10 @@ from rag.generation.answerer import AnswerGenerator
 from rag.generation.llm_factory import build_llm
 from rag.pipeline import RAGPipeline
 
+# Command-line entry point for the RAG system.
+# Builds the full retrieval and answer-generation pipeline,
+# accepts a user query, and prints the final answer,
+# confidence score, and supporting sources.
 
 def build_pipeline() -> RAGPipeline:
     embedding_manager = EmbeddingManager()
@@ -55,10 +59,6 @@ def main() -> None:
         print(
             f"- {s['source']} (page {s['page']}, score {s['score']:.3f})"
         )
-
-    # se vuoi, stampi anche un pezzo di contesto
-    # print("\n=== CONTEXT PREVIEW ===\n")
-    # print(result["context"][:1000])
 
 
 if __name__ == "__main__":

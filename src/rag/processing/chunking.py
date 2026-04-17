@@ -3,6 +3,10 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 from rag.config import settings
 
+# Document chunking utility for the RAG pipeline.
+# Uses a recursive character-based text splitter to break documents into
+# retrieval-friendly chunks, tagging each chunk with its index for
+# downstream tracing and debugging.
 
 DEFAULT_SEPARATORS = [
     "\n\n",

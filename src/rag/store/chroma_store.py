@@ -8,6 +8,10 @@ import numpy as np
 
 from rag.config import settings
 
+# Persistent Chroma-based vector store for the RAG pipeline.
+# Manages collection initialization, document and embedding insertion,
+# similarity queries, collection statistics, and full collection reset
+# for ingestion and retrieval workflows.
 
 class VectorStore:
     def __init__(
@@ -77,7 +81,7 @@ class VectorStore:
         return self.collection.count()
 
     def reset_collection(self) -> None:
-        """Drop e ricrea la collection, mantenendo path e nome."""
+        """Reset the collection maintaining path and name"""
         if self.client is None:
             self._initialize_store()
 

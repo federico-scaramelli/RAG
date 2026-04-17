@@ -8,6 +8,9 @@ from rag.processing.chunking import split_documents
 from rag.store import VectorStore
 from rag.config import settings
 
+# Reusable ingestion pipeline for the RAG project.
+# Loads source documents, splits them into chunks, generates embeddings,
+# and stores them in the vector database while reporting ingestion statistics.
 
 @dataclass
 class IngestResult:
